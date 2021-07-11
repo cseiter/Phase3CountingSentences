@@ -15,6 +15,7 @@ class String
   end
 
   def count_sentences
-
+    #sentences only end in !?.
+    self.split(/!|\?|\./).count
   end
 end
