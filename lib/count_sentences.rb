@@ -16,6 +16,8 @@ class String
 
   def count_sentences
     #sentences only end in !?.
-    self.split(/!|\?|\./).count
+    #complex sentence example:
+    #"This, well, is a sentence. This is too!! And so is this, I think? Woo..."
+    self.split(/!|\?|\./).reject(&:empty?).count
   end
 end
